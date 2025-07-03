@@ -114,14 +114,14 @@ h1 { text-align: center;}
     box-sizing: border-box;
     background: linear-gradient(135deg, #e6f0fa 60%, #f7fafc 180%);
     border-radius: 12px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     box-shadow: 0 2px 12px #aee9f733, 0 1px 4px #222;
-    flex: 0 0 100%;
-    margin: 10px auto;
+    flex: 0 0 calc(33.33333333% - 5px);
+    margin: 10px 0;
     font-weight: bold;
     color: #23243a;
     min-height: 10vh;
-    padding: 20px 10px;
+    padding: 10px 10px;
     text-align: center;
     border: 1.5px solid #b8b8ff;
     transition: box-shadow 0.3s, background 0.3s;
@@ -135,9 +135,9 @@ h1 { text-align: center;}
 }
 .result__item{
     display: block;
-    font-size: 2.8em;
+    font-size: 2.0em;
     color: #0077a8;
-    padding: 10px 0;
+    padding-top: 10px;
     text-shadow: none;
     letter-spacing: 2px;
 }
