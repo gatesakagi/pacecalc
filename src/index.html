@@ -10,16 +10,16 @@
     <div class="container">
         <h1>配速計算機</h1>
         <div class="inputpace__wrap">
-            <label for="inputPace">請輸入一公里的配速（分:秒）:</label>
+            <label class="inputpace__label" for="inputPace">請輸入一公里的配速（分:秒）</label>
             <input type="text" id="inputPace" placeholder="例如: 5:30">
+            <button id="calculateButton">計　算</button>
         </div>
-        <button id="calculateButton">計算操場配速</button>
-        
+
         <h2>操場配速秒數一覽表</h2>
         <ul class="results__wrap">
-            <li>200 公尺 <span class="result__item" id="result200m"></span></li>
-            <li>300 公尺 <span class="result__item" id="result300m"></span></li>
-            <li>400 公尺 <span class="result__item" id="result400m"></span></li>
+            <li>200 公尺 <span class="result__item" id="result200m">0</span></li>
+            <li>300 公尺 <span class="result__item" id="result300m">0</span></li>
+            <li>400 公尺 <span class="result__item" id="result400m">0</span></li>
         </ul>
     </div>
     <script src="scripts/main.js"></script>
