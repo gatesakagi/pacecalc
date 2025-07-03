@@ -1,41 +1,41 @@
-*{
+/* Reset & 基本設定 */
+* {
     margin: 0;
     padding: 0;
     line-height: 1;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+    color: #23243a;
 }
 
 h1, h2 {
-    color: #23243a;
     text-shadow: none;
     margin: 20px 0;
 }
+h1 { text-align: center; }
 
-h1 { text-align: center;}
-
+/* 容器樣式 */
 .container {
-    /* 保持金屬感背景 */
     background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(220,225,235,0.95) 100%);
-    color: #23243a; /* 主體文字顏色 */
-    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(174,233,247,0.08), 0 1.5px 8px #222;
+    border: 1.5px solid #e0e5ef;
+    backdrop-filter: blur(6px);
     width: 100%;
     max-width: 97%;
     margin: 1em auto;
     padding: 20px 15px;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(174,233,247,0.08), 0 1.5px 8px #222;
-    border: 1.5px solid #e0e5ef;
-    backdrop-filter: blur(6px); /* 增加玻璃金屬質感 */
 }
-@media screen and (min-width: 769px) {
-    .container{
-        max-width: 768px;
-    }
+
+@media (min-width: 769px) {
+    .container { max-width: 768px; }
 }
+
+/* 輸入區塊 */
 .inputpace__wrap {
     width: 100%;
     display: flex;
@@ -47,7 +47,6 @@ h1 { text-align: center;}
 .inputpace__label {
     flex: 0 0 100%;
     font-weight: bold;
-    color: #23243a;
     letter-spacing: 1px;
     font-size: 1.4em;
 }
@@ -55,15 +54,14 @@ h1 { text-align: center;}
 #inputPace {
     width: 100%;
     min-width: 6em;
-    max-width: 100%;
     margin: 10px 0;
     font-size: 1.4em;
     padding: 5px 10px;
     border: none;
-    border-bottom: 2px solid #7bb3e3;   /* 柔和藍色底線 */
+    border-bottom: 2px solid #7bb3e3;
     background: transparent;
-    color: #23243a;
     outline: none;
+    color: inherit;
     transition: border-color 0.3s, background 0.3s;
 }
 #inputPace::placeholder {
@@ -71,10 +69,19 @@ h1 { text-align: center;}
     opacity: 1;
 }
 #inputPace:focus {
-    border-bottom: 2.5px solid #4f7cac; /* 聚焦時更深藍色 */
+    border-bottom: 2.5px solid #4f7cac;
     background: #e6f0fa;
 }
 
+@media (min-width: 769px) {
+    .inputpace__label { flex: 0 0 fit-content; }
+    #inputPace {
+        margin-left: 1em;
+        width: auto;
+    }
+}
+
+/* 按鈕樣式 */
 #calculateButton {
     flex: 0 0 100%;
     padding: 10px 24px;
@@ -88,50 +95,40 @@ h1 { text-align: center;}
     box-shadow: 0 2px 8px #b8b8ff66;
     transition: background 0.3s, color 0.3s;
 }
-@media screen and (min-width: 769px) {
-    .inputpace__label {
-        flex: 0 0 fit-content;
-    }
-
-    #inputPace {
-        margin-left: 1em;
-        width: auto;
-    }
-}
 #calculateButton:hover {
     background: linear-gradient(90deg, #b8b8ff 0%, #6ec1e4 100%);
-    color: #23243a;
 }
 
+/* 結果區塊 */
 .results__wrap {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 10px 0;
+    padding: 0;
 }
 
 .results__wrap li {
-    box-sizing: border-box;
     background: linear-gradient(135deg, #e6f0fa 60%, #f7fafc 180%);
     border-radius: 12px;
     font-size: 1.2em;
     box-shadow: 0 2px 12px #aee9f733, 0 1px 4px #222;
-    flex: 0 0 calc(33.33333333% - 10px);
+    flex: 0 0 calc(33.333% - 10px);
     margin: 10px 0;
     font-weight: bold;
-    color: #23243a;
+    color: inherit;
     min-height: 10vh;
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
     border: 1.5px solid #b8b8ff;
     transition: box-shadow 0.3s, background 0.3s;
 }
 
-.result__item{
+.result__item {
     display: block;
-    font-size: 2.0em;
+    font-size: 2em;
     color: #0077a8;
     padding-top: 10px;
-    text-shadow: none;
     letter-spacing: 2px;
 }
