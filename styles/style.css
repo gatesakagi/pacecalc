@@ -127,12 +127,6 @@ h1 { text-align: center;}
     transition: box-shadow 0.3s, background 0.3s;
 }
 
-@media screen and (min-width: 769px) {
-    .results__wrap li {
-        margin: 0 auto;
-        flex: 0 0 calc(33.33333333% - 40px);
-    }
-}
 .result__item{
     display: block;
     font-size: 2.0em;
