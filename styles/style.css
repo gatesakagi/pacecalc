@@ -7,7 +7,6 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
-    min-height: 100vh;
 }
 
 h1, h2 {
@@ -17,7 +16,6 @@ h1, h2 {
 }
 
 h1 { text-align: center;}
-
 
 .container {
     /* 保持金屬感背景 */
