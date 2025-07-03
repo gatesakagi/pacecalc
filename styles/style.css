@@ -23,9 +23,9 @@ h1 { text-align: center;}
     color: #23243a; /* 主體文字顏色 */
     box-sizing: border-box;
     width: 100%;
-    max-width: 95%;
+    max-width: 97%;
     margin: 1em auto;
-    padding: 2em 24px;
+    padding: 20px 15px;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(174,233,247,0.08), 0 1.5px 8px #222;
     border: 1.5px solid #e0e5ef;
@@ -116,7 +116,7 @@ h1 { text-align: center;}
     border-radius: 12px;
     font-size: 1.2em;
     box-shadow: 0 2px 12px #aee9f733, 0 1px 4px #222;
-    flex: 0 0 calc(33.33333333% - 5px);
+    flex: 0 0 calc(33.33333333% - 10px);
     margin: 10px 0;
     font-weight: bold;
     color: #23243a;
